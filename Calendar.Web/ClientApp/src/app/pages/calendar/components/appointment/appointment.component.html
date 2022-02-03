@@ -1,0 +1,18 @@
+<div class="container" fxLayout fxLayoutAlign="center" fxLayoutGap="50px" fxLayoutGap.xs="0" 
+[style]="{'margin-top':'30px'}">
+    <div class="item item-1" fxFlex="40%">
+        <p-listbox [options]="appointments" [multiple]="false" optionLabel="name"
+         [style]="{'max-height':'350px','min-height':'340px','overflow':'auto'}">
+            <ng-template let-appointment pTemplate="item">
+                <div class="country-item">
+                    <div>{{appointment.date}} <a
+                            [routerLink]="['appointment',appointment.id]">{{appointment.subject}}</a>
+                    </div>
+                </div>
+            </ng-template>
+        </p-listbox>
+    </div>
+    <div class="item item-2" fxFlex>
+        <router-outlet></router-outlet>
+    </div>
+</div>

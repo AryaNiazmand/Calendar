@@ -1,0 +1,11 @@
+<p-card>
+    <div> Description : {{appointmentDetail?.appointment?.subject}}</div>
+    <div> Date : {{appointmentDetail?.appointment?.date}}</div>
+    <div>organizer : {{appointmentDetail?.organizer}}</div>
+    <p>Attendees :</p>
+    <ul>
+        <li *ngFor="let user of appointmentDetail?.attendees">
+            {{user?.fullName}}
+        </li>
+    </ul>
+</p-card>
